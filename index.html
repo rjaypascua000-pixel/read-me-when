@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Read Me When...</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="page">
+  <div class="hero">
+    <button class="fav-fab" id="favFab" aria-label="View saved verses">
+      <span class="fav-fab-heart" id="favFabHeart">&#9825;</span>
+      <span class="fav-fab-count" id="favFabCount" hidden>0</span>
+    </button>
+    <div class="hero-heart">&#10084;</div>
+    <h1 class="title">Read Me When...</h1>
+    <p class="subtitle">Whatever you're feeling right now, there's a verse waiting for you. Choose the word that fits this moment.</p>
+  </div>
+
+  <div class="mood-grid" id="moodGrid"></div>
+
+  <div class="home-footer">
+    <p>“He heals the brokenhearted and binds up their wounds.”</p>
+    <span class="ref">Psalm 147:3</span>
+  </div>
+</div>
+
+<!-- ---------- VERSE DETAIL MODAL ---------- -->
+<div class="overlay" id="overlay">
+  <div class="modal" id="detailBg">
+    <div class="modal-inner">
+      <button class="close-btn" id="backBtn" aria-label="Close">&#10005;</button>
+
+      <div class="detail-header">
+        <div class="mood-icon-lg" id="moodIconLg"></div>
+        <h2 class="mood-name" id="moodName"></h2>
+        <p class="mood-tag" id="moodTag"></p>
+      </div>
+
+      <div class="verse-card" id="verseCard">
+        <button class="heart-btn" id="saveBtn" aria-label="Save this verse to favorites">
+          <span id="heartIcon">&#9825;</span>
+        </button>
+        <p class="verse-text" id="verseText"></p>
+        <p class="verse-ref" id="verseRef"></p>
+      </div>
+
+      <div class="dots" id="dots"></div>
+
+      <div class="actions">
+        <button class="btn primary" id="nextBtn">Another verse</button>
+      </div>
+
+      <div class="toast" id="toast"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- FAVORITES LIST MODAL ---------- -->
+<div class="overlay" id="favOverlay">
+  <div class="modal">
+    <div class="modal-inner">
+      <button class="close-btn" id="favBackBtn" aria-label="Close">&#10005;</button>
+      <div class="detail-header">
+        <div class="mood-icon-lg fav-header-icon">&#9829;</div>
+        <h2 class="mood-name">Your Verses</h2>
+        <p class="mood-tag">Saved for the moments that need them.</p>
+      </div>
+      <div class="fav-list" id="favList"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
